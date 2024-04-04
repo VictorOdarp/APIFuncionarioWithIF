@@ -173,7 +173,7 @@ namespace APIFuncionariosIF.Services
             return serviceResponse;
         }
 
-        public async Task<ServiceResponse<List<FuncionarioModel>>> DataAlteracaoFuncionario(int id)
+        public async Task<ServiceResponse<List<FuncionarioModel>>> InativaFuncionario(int id)
         {
             ServiceResponse<List<FuncionarioModel>> serviceResponse = new ServiceResponse<List<FuncionarioModel>>();
 
@@ -195,6 +195,7 @@ namespace APIFuncionariosIF.Services
                     serviceResponse.Success = false;
                 }
 
+                funcionario.Active = false;
                 funcionario.ChangeDate = DateTime.Now.ToLocalTime();
 
                 _context.Funcionario.Update(funcionario);

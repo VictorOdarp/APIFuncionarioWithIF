@@ -52,11 +52,11 @@ namespace APIFuncionariosIF.Controllers
             return Ok(delFuncionario);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("InativaFuncionario")]
 
-        public async Task<ActionResult<ServiceResponse<List<FuncionarioModel>>>> AlteracaoData(int id)
+        public async Task<ActionResult<ServiceResponse<List<FuncionarioModel>>>> InativaFuncionario(int id)
         {
-            var funcionario = await _funcionarioInterface.DataAlteracaoFuncionario(id);
+            var funcionario = await _funcionarioInterface.InativaFuncionario(id);
             return Ok(funcionario);
         }
 

@@ -9,6 +9,6 @@ namespace APIFuncionariosIF.Interface
         Task<ServiceResponse<FuncionarioModel>> GetFuncionarioById (int id);
         Task<ServiceResponse<List<FuncionarioModel>>> UpdateFuncionario(FuncionarioModel editFuncionario);
         Task<ServiceResponse<List<FuncionarioModel>>> DeleteFuncionario(int id);
-        Task<ServiceResponse<List<FuncionarioModel>>> DataAlteracaoFuncionario(int id);
+        Task<ServiceResponse<List<FuncionarioModel>>> InativaFuncionario(int id);
     }
 }
